@@ -1,0 +1,76 @@
+﻿focus_tree = {
+	id = Burgundian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BRG
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = BRG_The_Chaos_in_the_border
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+
+		available = {
+			NOT = { is_in_faction_with = JAP }
+		}
+		bypass = {
+
+		}
+
+		cost = 1
+		#prerequisite = { focus = AST_workers_paradise }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -50
+		}
+		
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = BRG_Himmlers_order
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 1
+		relative_position_id =  BRG_The_Chaos_in_the_border
+
+		available = {
+			NOT = { is_in_faction_with = JAP }
+		}
+		bypass = {
+
+		}
+
+		cost = 1
+		#prerequisite = { focus = AST_workers_paradise }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = -50
+		}
+		
+		ai_will_do = {
+		}
+	}
+
+
+}		
